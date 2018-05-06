@@ -1,7 +1,7 @@
 <header class="mw-100 container-fluid">
   <div class="row">
-    <div class="col clearfix">
-      <div class="float-left">
+    <div class="col">
+      <div>
         <nav class="navbar navbar-expand-md">
           <a class="navbar-brand" routerLink="/">
           <span class="navbar-text">
@@ -13,13 +13,25 @@
           </button>
         </nav>
       </div>
-      <div class="float-md-right mt-3">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" routerLink="/">Главная страница</a></li>
+        </ul>
         <form class="form-inline">
-          <input type="search" class="form-control" title="Поиск по сайту" placeholder="Найти">
-          <button type="button" class="btn btn-success">Sign in</button>
-          <button type="button" class="btn btn-success">Sign up</button>
+          <div class="input-group mx-1">
+            <div class="input-group-pretend">
+              <span class="input-group-text">»</span>
+            </div>
+            <input type="search" class="form-control" title="Поиск по сайту" placeholder="Найти">
+          </div>
+          <button type="button" class="btn btn-success mx-1">Sign in</button>
+          <button type="button" class="btn btn-success mx-1">Sign up</button>
         </form>
-      </div>
+      </nav>
     </div>
   </div>
 </header>

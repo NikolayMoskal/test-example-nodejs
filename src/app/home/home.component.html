@@ -1,0 +1,33 @@
+<div>
+  <div class="row mb-5">
+    <div class="col-md">
+      <p class="h2">{{rssFeed.title}}</p>
+      <div class="row">
+        <div class="col-md-4"><label>Адрес источника</label></div>
+        <div class="col-md">
+          <small class="form-text text-muted">{{rssFeed.url}}</small>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{rssFeed.description}}</small>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md">
+      <div *ngFor="let item of rssFeed.items">
+        <p class="h2 text-success">{{item.title}}</p>
+        <div class="row">
+          <div class="col-md-3">
+            <label class="text-muted">Дата публикации</label>
+          </div>
+          <div class="col-md">
+            <label class="text-info">{{timestampToDateString(item.created)}}</label>
+          </div>
+        </div>
+        <a href="{{item.link}}">Ссылка на новость</a>
+        <div [innerHtml]="item.description"></div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
